@@ -49,3 +49,33 @@ then paste this command in VM ```sudo cat /var/lib/jenkins/secrets/initialAdminP
 ![Enter your Data](c:\Users\DESKTOP\OneDrive\Project\Screenshot 2025-07-25 163542.png)
 
 ![And finally you have succed to instaling jenkins](c:\Users\DESKTOP\OneDrive\Project\Screenshot 2025-07-25 164317.png)
+
+## Install Docker pipeline plugin in Jenkins:
+- Log in to Jenkins.
+- Go to manage and search for ``Docker pipeline``
+- Select and Install
+- Restart Jenkins after plugin has installed.
+
+## Docker as agent Configuration
+
+run this command bellow 
+
+```bash 
+sudo apt update
+sudo apt install docker.io
+```
+
+## Grant VM user and Jenkins user permission to the docker daemon
+
+```bash
+sudo su -
+user -aG docker jenkins
+user -aG docker (your name VM users)
+systemctl restart docker
+```
+Then restart Jenkins again 
+
+```bash
+http://localhost:8080/restart
+```
+And your docker agent configuration is now success

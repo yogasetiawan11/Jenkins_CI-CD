@@ -68,6 +68,7 @@ then paste this command in VM ```sudo cat /var/lib/jenkins/secrets/initialAdminP
 - Go to manage and search for ``Docker pipeline``
 - Select and Install
 - Restart Jenkins after plugin has installed.
+<img width="1366" height="591" alt="Image" src="https://github.com/user-attachments/assets/249a4bd8-b37a-4527-8af9-6f81fc94d574" />
 
 ## Docker as agent Configuration
 

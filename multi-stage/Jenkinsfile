@@ -1,0 +1,23 @@
+//here an example of multi-stage Jenkins pipeline that uses Docker agents for both frontend and backend stages.
+pipeline {
+    agent none
+    stages {
+        stage('frontend') {
+            agent {
+                docker { image 'node:16-alpine' }
+            }
+            steps {
+                sh 'node --version'
+            }
+        }
+        stages {
+        stage('Backend') {
+            agent {
+                docker { image 'maven:3.8.1-adoptopenjdk-11' }
+            }
+            steps {
+                sh 'mvn --version'
+            }
+        }
+    }
+}

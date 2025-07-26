@@ -10,7 +10,6 @@ pipeline {
                 sh 'node --version'
             }
         }
-        stages {
         stage('Backend') {
             agent {
                 docker { image 'maven:3.8.1-adoptopenjdk-11' }
@@ -19,7 +18,7 @@ pipeline {
                 sh 'mvn --version'
             }
         }
-               stage('DB') {
+        stage('DB') {
             agent {
                 // I'm not recommend to use latest version
                 docker { image 'mysql:latest' }

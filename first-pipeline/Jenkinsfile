@@ -1,0 +1,13 @@
+// This example demonstrates a simple Jenkins pipeline that uses a Docker agent with Node.js.
+pipeline {
+    agent {
+      docker { image 'node:16-alpine' }
+    }
+    stages {
+        stage('test') {
+            steps {
+                sh 'node --version'
+            }
+        }
+    }
+}

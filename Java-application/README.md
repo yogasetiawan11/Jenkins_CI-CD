@@ -1,8 +1,8 @@
 # Execute this application locally
 Checkout the repo and move to the Directory
 ```bash
-git clone <<this repository>>
-cd <<to this repository>>
+git clone https://github.com/yogasetiawan11/Jenkins_CI-CD.git
+cd Jenkins_CI-CD.git
 ```
 
 Execute the Maven target to generate Artifacts 

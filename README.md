@@ -7,7 +7,9 @@ Continuous Delivery is the practice of automatically preparing code changes for 
 # Let's Start with CI part
 
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/420d1261-36c0-4162-bc82-5dbce033d282" />
+
+<img width="1166" height="768" alt="Image" src="https://github.com/user-attachments/assets/420d1261-36c0-4162-bc82-5dbce033d282" />
+
 
 
 Example with use case, imagine I have Git Repository Developer always store all of code in Repository and there is jenkins or any orchestrator which is responsible for watching ``commit`` or ``pull`` on this Repository. whenever there is a pull request or commit created Jenkins has to be triggered. There are multiple ways how Jenkins can be triggered. one is Jenkin can continously pull to Your Repo, It can configure some build triggered in Jenkins. but The most efficient way is to use ``webhook`` using webhook Your Jenkins will not watch The Repository but Your Repository will send notification to Your Jenkins
@@ -53,7 +55,9 @@ But there is a Problem when use this approach because these Tools isn't designed
 For this reason you have to choose tools spesific for CD like: Gitops, ArgoCD, etc 
 
 
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/40f43acc-48e8-4c68-9ca2-e8d423b6ee10" />
+
+<img width="1166" height="768" alt="Image" src="https://github.com/user-attachments/assets/40f43acc-48e8-4c68-9ca2-e8d423b6ee10" />
+
 
 
 Once the docker is pushed to Docker Registry, we have Kubernetes Cluster Inside this k8s we have deployed 2 Continous Delivery tools:

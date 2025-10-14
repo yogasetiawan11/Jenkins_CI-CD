@@ -3,12 +3,13 @@
 
 ``Continuous Delivery`` is the practice of automatically preparing code changes for release to production. Continuous Deployment goes a step further by automatically deploying every change that passes tests to production. Continous Delivery which ensure that your Deployment or Delivery is done 
 
+
+
+<img width="1166" height="768" alt="Image" src="https://github.com/user-attachments/assets/420d1261-36c0-4162-bc82-5dbce033d282" />
+
+
+
 # Let's Start with CI part
-
-
-<img width="1366" height="768" alt="Image" src="https://github.com/user-attachments/assets/420d1261-36c0-4162-bc82-5dbce033d282" />
-
-
 Example with use case, imagine I have Git Repository Developer always store all of code in Repository and there is jenkins or any orchestrator which is responsible for watching ``commit`` or ``pull`` on this Repository. whenever there is a pull request or commits created Jenkins has to be triggered.
 There are multiple ways how Jenkins can be triggered. one is Jenkin can continously pull to Your Repo, It can configure some build triggered in Jenkins. but The most efficient way is to use ``webhook`` using webhook Your Jenkins will not watch The Repository but Your Repository will send notification to Your Jenkins
 

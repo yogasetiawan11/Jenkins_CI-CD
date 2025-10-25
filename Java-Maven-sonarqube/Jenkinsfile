@@ -8,7 +8,7 @@ pipeline {
   stages {
     stage('Checkout') {
       steps {
-        //sh 'echo passed'
+        sh 'echo passed'
         //git branch: 'main', url: 'https://github.com/yogasetiawan11/Jenkins_CI-CD'
         // "Uncomment 2 code above If you're not using SCM"
       }

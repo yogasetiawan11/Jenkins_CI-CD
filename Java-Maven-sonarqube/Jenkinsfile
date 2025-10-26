@@ -14,10 +14,14 @@ pipeline {
       }
     }
     stage('Build and Test') {
-      steps {
-        sh 'ls -ltr'
-        // build the project and create a JAR file
-        sh 'cd Java-Maven-sonarqube && mvn clean package' // change directory to where the POM.XML file is located and run tests
+      steps { 
+        sh 'ls -ltr'  // build the project and create a JAR file
+        dir('Java-Maven-sonarqube') {
+          sh 'mvn clean test'  // change directory to where the POM.XML file is located and run tests
+        retry(3) {
+            sh 'cd Java-Maven-sonarqube && mvn clean package -U' // change directory to where the POM.XML file is located and run tests
+          }
+        }
       }
     }
     stage('Static Code Analysis') {

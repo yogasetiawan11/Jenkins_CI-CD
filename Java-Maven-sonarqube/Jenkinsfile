@@ -17,9 +17,11 @@ pipeline {
       steps { 
         sh 'ls -ltr'  // build the project and create a JAR file
         dir('Java-Maven-sonarqube') {
-          sh 'mvn clean test'  // change directory to where the POM.XML file is located and run tests
-        retry(3) {
-            sh 'cd Java-Maven-sonarqube && mvn clean package -U' // change directory to where the POM.XML file is located and run tests
+          retry(3) {
+            sh 'mvn clean test -U -Dmaven.wagon.http.retryHandler.count=3'
+          }
+          retry(3) {
+            sh 'mvn clean package -U -Dmaven.wagon.http.retryHandler.count=3'
           }
         }
       }
